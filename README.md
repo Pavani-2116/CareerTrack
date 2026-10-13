@@ -1,39 +1,62 @@
 # CareerTrack — Job Application Tracker
 
-A responsive job-search dashboard built with **HTML5, CSS3, and vanilla JavaScript**. CareerTrack helps users organize applications, track hiring stages, and remember follow-ups.
+A responsive job-search dashboard built with **HTML5, CSS3, and Vanilla JavaScript**. CareerTrack helps job seekers organize applications, track hiring stages, monitor progress, and remember follow-ups.
 
-## Features
+## 🚀 Live Demo
+
+**[View CareerTrack Live](https://pavani-2116.github.io/CareerTrack/)**
+
+**GitHub Repository:** [Pavani-2116/CareerTrack](https://github.com/Pavani-2116/CareerTrack)
+
+> The live demo link will work after GitHub Pages has been enabled and the site has finished deploying.
+
+## 📸 Screenshots
+
+### Dashboard
+
+![CareerTrack Dashboard](docs/screenshots/dashboard.png)
+
+The dashboard displays application statistics, the application pipeline, progress insights, follow-up tracking, and the job-search checklist.
+
+### Add Application
+
+![Add Application Form](docs/screenshots/add-application.png)
+
+The application form allows users to record company names, job titles, application dates, hiring status, job posting URLs, follow-up dates, and notes.
+
+## ✨ Features
 
 - Add, edit, and delete job applications
 - Track Applied, Assessment, Interview, Offer, and Rejected stages
-- Search by company or job title
-- Filter by status and sort by application date
-- Dashboard statistics and progress indicators
-- Follow-up date tracking
-- Personal job-search checklist
-- Persistent data using browser `localStorage`
+- Search by company name or job title
+- Filter applications by status and sort by application date
+- View dashboard statistics and progress indicators
+- Track follow-up dates
+- Maintain a personal job-search checklist
+- Save data in browser `localStorage`
 - Responsive desktop, tablet, and mobile layouts
-- Accessible form labels, keyboard-friendly dialog, and reduced-motion support
+- Keyboard-friendly dialog and reduced-motion support
 
-## Tech stack
+## 🛠️ Tech Stack
 
-- HTML5 semantic markup
-- CSS3 (responsive layouts, custom properties, transitions)
-- Vanilla JavaScript ES modules
-- Browser LocalStorage API
+- **HTML5** — semantic page structure
+- **CSS3** — responsive layouts, custom properties, and transitions
+- **JavaScript** — ES modules and application functionality
+- **LocalStorage API** — browser-based data persistence
 
-## Run locally
+## 💻 Run Locally
 
-Because the app uses JavaScript modules, serve the folder through a local web server.
+1. Clone the repository:
 
-1. Download or clone this repository.
-2. Open the project folder in VS Code.
-3. Start the **Live Server** extension from `index.html`.
-4. Open the local URL shown by Live Server.
+   ```bash
+   git clone https://github.com/Pavani-2116/CareerTrack.git
+   ```
 
-You can also use another static local development server.
+2. Open the `CareerTrack` folder in VS Code.
+3. Install the Live Server extension if you do not already have it.
+4. Right-click `index.html` and select **Open with Live Server**.
 
-## Project structure
+## 📁 Project Structure
 
 ```text
 CareerTrack/
@@ -45,6 +68,8 @@ CareerTrack/
 │   └── responsive.css
 ├── docs/
 │   └── screenshots/
+│       ├── dashboard.png
+│       └── add-application.png
 ├── js/
 │   ├── main.js
 │   ├── app.js
@@ -59,21 +84,17 @@ CareerTrack/
 └── .gitignore
 ```
 
-## Data and privacy
+## 🔒 Data and Privacy
 
-Application records and checklist state are stored locally in the current browser. They are not synced across devices and there is no server-side database or account system. Avoid entering sensitive personal information.
+Application records and checklist state are stored in the current browser using `localStorage`. Data is not synced across devices, and the application does not currently have a backend database or user account system.
 
-## Future improvements
+## 🔮 Future Improvements
 
 - Export and import application data as JSON or CSV
 - Add a visual hiring pipeline board
 - Add automated tests
 - Add optional backend synchronization
 
-## Screenshots
+## 📄 License
 
-Add screenshots of the running app to `docs/screenshots/` and embed them here once captured.
-
-## License
-
-Released under the MIT License. See `LICENSE`.
+This project is released under the MIT License. See the [LICENSE](LICENSE) file for details.

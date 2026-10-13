@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CareerTrack helps you organize and track job applications in one place.">
+  <title>CareerTrack | Job Application Tracker</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="CareerTrack home">
+        <span class="brand-mark">C</span><span>CareerTrack</span>
+      </a>
+      <p class="nav-label">WORKSPACE</p>
+      <nav class="navigation" aria-label="Main navigation">
+        <a class="nav-link active" href="#overview"><span>▦</span> Overview</a>
+        <a class="nav-link" href="#applications"><span>▤</span> Applications</a>
+        <a class="nav-link" href="#progress"><span>◷</span> Progress</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="tip-card">
+          <span class="tip-icon">✦</span>
+          <strong>Small steps, big offers.</strong>
+          <p>Keep your applications organized and your next opportunity in sight.</p>
+        </div>
+        <p class="sidebar-foot">CAREERTRACK · PERSONAL WORKSPACE</p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">C</span><strong>CareerTrack</strong></div>
+        <div class="welcome">
+          <p class="eyebrow" id="today-label">YOUR CAREER WORKSPACE</p>
+          <h1>Job search, <span>in control.</span></h1>
+          <p class="subtitle">A clearer view of every opportunity you're pursuing.</p>
+        </div>
+        <button class="button button-primary top-add" id="top-add-button" type="button">＋ Add application</button>
+      </header>
+
+      <section class="stats-grid" id="overview" aria-label="Application statistics">
+        <article class="stat-card">
+          <div class="stat-top"><span class="stat-label">Total applications</span><span class="stat-icon icon-blue">↗</span></div>
+          <p class="stat-value" id="total-applications">0</p><p class="stat-note">Opportunities tracked</p>
+        </article>
+        <article class="stat-card">
+          <div class="stat-top"><span class="stat-label">Interviews</span><span class="stat-icon icon-amber">◎</span></div>
+          <p class="stat-value" id="interview-applications">0</p><p class="stat-note">Conversations started</p>
+        </article>
+        <article class="stat-card">
+          <div class="stat-top"><span class="stat-label">Offers</span><span class="stat-icon icon-green">✦</span></div>
+          <p class="stat-value" id="offer-applications">0</p><p class="stat-note">Potential next steps</p>
+        </article>
+        <article class="stat-card">
+          <div class="stat-top"><span class="stat-label">Follow-ups due</span><span class="stat-icon icon-purple">◷</span></div>
+          <p class="stat-value" id="followup-applications">0</p><p class="stat-note">Today or overdue</p>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <section class="panel application-panel" id="applications">
+          <div class="panel-header">
+            <div><p class="eyebrow">YOUR PIPELINE</p><h2>Applications</h2><p class="panel-subtitle">Keep every opportunity moving forward.</p></div>
+            <button class="button button-primary" id="panel-add-button" type="button">＋ Add new</button>
+          </div>
+          <div class="toolbar">
+            <label class="search-box"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Search company or role…" aria-label="Search applications"></label>
+            <label class="filter-label"><span class="sr-only">Filter by status</span><select id="filter-status"><option value="all">All statuses</option><option value="applied">Applied</option><option value="assessment">Assessment</option><option value="interview">Interview</option><option value="offer">Offer</option><option value="rejected">Rejected</option></select></label>
+            <button class="button button-quiet" id="sort-button" type="button">↕ Date</button>
+          </div>
+          <div class="table-wrap">
+            <table class="applications-table">
+              <thead><tr><th>COMPANY / ROLE</th><th>APPLIED ON</th><th>STATUS</th><th class="actions-heading">ACTIONS</th></tr></thead>
+              <tbody id="applications-list"></tbody>
+            </table>
+            <div class="empty-state" id="empty-state"><div class="empty-art">↗</div><h3>Your next opportunity starts here</h3><p>Add a job application to build your personal pipeline.</p><button class="button button-primary" id="empty-add-button" type="button">Add your first application</button></div>
+          </div>
+          <div class="panel-footer"><span id="results-count">Showing 0 applications</span><span><span class="live-dot"></span> Saved in this browser</span></div>
+        </section>
+
+        <aside class="right-column">
+          <section class="panel progress-panel" id="progress">
+            <div class="panel-header compact"><div><p class="eyebrow">YOUR MOMENTUM</p><h2>Progress snapshot</h2></div><span class="progress-emoji">✦</span></div>
+            <p class="progress-copy">Every application is a step forward. Keep showing up.</p>
+            <div class="progress-track"><div class="progress-fill" id="progress-bar"></div></div>
+            <div class="progress-meta"><span>Pipeline progress</span><strong id="progress-percentage">0%</strong></div>
+            <div class="mini-stats"><div><span>Response rate</span><strong id="response-rate">0%</strong></div><div><span>Rejections</span><strong id="rejected-applications">0</strong></div></div>
+          </section>
+          <section class="panel checklist-panel">
+            <div class="panel-header compact"><div><p class="eyebrow">STAY PREPARED</p><h2>Job search checklist</h2></div></div>
+            <label class="check-row"><input type="checkbox" data-check="resume"><span class="custom-check"></span><span><strong>Polish your resume</strong><small>Tailor it to the role</small></span></label>
+            <label class="check-row"><input type="checkbox" data-check="linkedin"><span class="custom-check"></span><span><strong>Update LinkedIn</strong><small>Keep your profile current</small></span></label>
+            <label class="check-row"><input type="checkbox" data-check="practice"><span class="custom-check"></span><span><strong>Practice interview answers</strong><small>Prepare one story today</small></span></label>
+            <label class="check-row"><input type="checkbox" data-check="followup"><span class="custom-check"></span><span><strong>Review follow-ups</strong><small>Don't leave people waiting</small></span></label>
+            <p class="checklist-progress" id="checklist-progress">0 of 4 completed</p>
+          </section>
+          <section class="quote-card"><span>“</span><p>Progress is built one thoughtful application at a time.</p><small>YOUR CAREER, YOUR PACE</small></section>
+        </aside>
+      </section>
+      <footer class="footer"><span>© <span id="current-year"></span> CareerTrack</span><span>Built with HTML, CSS &amp; JavaScript</span></footer>
+    </main>
+  </div>
+
+  <dialog class="application-dialog" id="application-dialog">
+    <form id="application-form" class="dialog-form">
+      <div class="dialog-header"><div><p class="eyebrow">PIPELINE ENTRY</p><h2 id="form-title">Add application</h2></div><button class="icon-button" id="close-dialog" type="button" aria-label="Close dialog">×</button></div>
+      <div class="form-grid">
+        <label class="field"><span>Company name *</span><input id="company" name="company" required maxlength="100" placeholder="e.g. Acme Technologies"></label>
+        <label class="field"><span>Job title *</span><input id="position" name="position" required maxlength="100" placeholder="e.g. Frontend Developer"></label>
+        <label class="field"><span>Application date *</span><input id="date" name="date" type="date" required></label>
+        <label class="field"><span>Status *</span><select id="status" name="status" required><option value="applied">Applied</option><option value="assessment">Assessment</option><option value="interview">Interview</option><option value="offer">Offer</option><option value="rejected">Rejected</option></select></label>
+        <label class="field"><span>Job posting URL</span><input id="job-url" name="jobUrl" type="url" placeholder="https://…"></label>
+        <label class="field"><span>Follow-up date</span><input id="followup" name="followup" type="date"></label>
+        <label class="field field-full"><span>Notes</span><textarea id="notes" name="notes" rows="3" maxlength="1000" placeholder="Recruiter details, next steps, interview notes…"></textarea></label>
+      </div>
+      <p class="form-error" id="form-error" role="alert"></p>
+      <div class="dialog-actions"><button class="button button-quiet" id="cancel-dialog" type="button">Cancel</button><button class="button button-primary" type="submit" id="save-button">Save application</button></div>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
